@@ -72,7 +72,7 @@ public class StreamTest {
         Optional<Student> os = students.stream()
         		.filter(s -> s.getAddress().getZipcode().equals("1235"))
         		.findFirst();
-        System.out.println(maybeBob.isPresent() ? os.get().getName() : "No student found");
+        System.out.println(os.isPresent() ? os.get().getName() : "No student found");
         
         
         
@@ -84,7 +84,7 @@ public class StreamTest {
 
         
         // Code your Solution here
-
+        
         
         
         
