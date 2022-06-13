@@ -54,8 +54,10 @@ public class StreamTest {
 
         
         // Code your Solution here
-
-        
+        Optional<Student> maybeBob = students.stream()
+        		.filter(s -> s.getName().equals("Bob"))
+        		.findFirst();
+        System.out.println(maybeBob.isPresent() ? maybeBob.get().getName() : "No student found");
         
         
         /***************************************************************************
