@@ -1,12 +1,9 @@
 package com.revature.challenge;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import com.revature.models.Address;
 import com.revature.models.MobileNumber;
@@ -174,7 +171,9 @@ public class StreamTest {
  
         System.out.println(8);
         // Code your Solution here, don't touch the code above
-
+        nameList.stream()
+        	.map(n -> n.toUpperCase())
+        	.forEach(System.out::println);
         
         
         
@@ -188,8 +187,10 @@ public class StreamTest {
  
         System.out.println(9);
         // Code your Solution here, don't touch the code above
-
-
+        namesList.stream()
+        	.sorted()
+        	.forEach(System.out::println);
+        	
         
         
  
