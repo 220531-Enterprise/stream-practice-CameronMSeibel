@@ -95,9 +95,11 @@ public class StreamTest {
              names to the console.
          ***************************************************************************/
 
-        
+        System.out.println(4);
         // Code your Solution here
-        
+        students.stream()
+	        .filter(s -> s.getMobileNumbers().stream().anyMatch(n -> n.getNumber().equals("1233") || n.getNumber().equals("1234")))
+			.forEach(s -> System.out.println(s.getName()));
         
         
         
@@ -121,9 +123,12 @@ public class StreamTest {
  
         List<TempStudent> tmpStudents = Arrays.asList(tmpStud1, tmpStud2);
         
+        System.out.println(5);
         // Code your Solution here, don't touch the code above
- 
-
+        List<Student> studentList = tmpStudents.stream()
+        		.map(s -> new Student(s.name, s.age, s.address, s.mobileNumbers))
+        		.collect(Collectors.toList());
+        System.out.println(studentList);
         
         
         
