@@ -139,9 +139,12 @@ public class StreamTest {
              Print it to the console.
         ****************************************************************************/
 
-        
+        System.out.println(6);
         // Code your Solution here
-
+        List<String> studentNames = studentList.stream()
+        		.map(s -> s.getName())
+        		.collect(Collectors.toList());
+        System.out.println(studentNames);
         
         
         
@@ -151,9 +154,13 @@ public class StreamTest {
           	  Print that String to the console.
         ****************************************************************************/
 
-        
+        System.out.println(7);
         // Code your Solution here
-
+        String name = "";
+        for(Student s : studentList) {
+        	name += s.getName();
+        }
+        System.out.println(name);
         
         
         
@@ -165,6 +172,7 @@ public class StreamTest {
         List<String> nameList =
             Arrays.asList("Bob", "Danny", "Alice", "Eddie", "Cathy");
  
+        System.out.println(8);
         // Code your Solution here, don't touch the code above
 
         
@@ -178,6 +186,7 @@ public class StreamTest {
         List<String> namesList =
             Arrays.asList("Bob", "Danny", "Alice", "Eddie", "Cathy");
  
+        System.out.println(9);
         // Code your Solution here, don't touch the code above
 
 
