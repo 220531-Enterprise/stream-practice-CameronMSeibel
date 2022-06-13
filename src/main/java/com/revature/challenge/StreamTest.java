@@ -52,7 +52,7 @@ public class StreamTest {
              doesn't exist. Resource: https://www.geeksforgeeks.org/java-8-optional-class/
         ****************************************************************************/
 
-        
+        System.out.println(1);
         // Code your Solution here
         Optional<Student> maybeBob = students.stream()
         		.filter(s -> s.getName().equals("Bob"))
@@ -67,7 +67,7 @@ public class StreamTest {
              doesn't exist. Resource: https://www.geeksforgeeks.org/java-8-optional-class/
         ****************************************************************************/
 
-        
+        System.out.println(2);
         // Code your Solution here
         Optional<Student> os = students.stream()
         		.filter(s -> s.getAddress().getZipcode().equals("1235"))
@@ -82,10 +82,11 @@ public class StreamTest {
              names to the console.
         *****************************************************************************/
 
-        
+        System.out.println(3);
         // Code your Solution here
-        
-        
+        students.stream()
+        		.filter(s -> s.getMobileNumbers().stream().anyMatch(n -> n.getNumber().equals("3333")))
+        		.forEach(s -> System.out.println(s.getName()));
         
         
         
